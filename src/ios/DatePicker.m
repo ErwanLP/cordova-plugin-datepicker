@@ -268,7 +268,8 @@
   // See: http://stackoverflow.com/questions/6613110/what-is-the-best-way-to-deal-with-the-nsdateformatter-locale-feature
   //NSString *languageID = [[NSBundle mainBundle] preferredLocalizations].firstObject;
   NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
-  NSLocale *loc = [[NSLocale alloc] initWithLocaleIdentifier:language];
+  //NSLocale *loc = [[NSLocale alloc] initWithLocaleIdentifier:language];
+  NSLocale *loc = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];  
   [dateFormatter setLocale: loc];
   [dateFormatter setTimeZone:timezone];
   [dateFormatter setDateFormat:format];
